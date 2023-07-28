@@ -47,15 +47,15 @@ class Inicio extends StatelessWidget {
               ],
             ),
           ),
-          Icon(Icons.sports_football_outlined)
-          // Container(
-          //   margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-          //   child: const Text(
-          //       'Al pulsar el botón "iniciar" que aparece abajo, reconozco que he leído y acepto la política de privacidad y los términos de servicio de BauBau SAS.'),
-          // ),
-          // botonHuella('Iniciar', context, () {
-          //   print('Botón Iniciar Presionado');
-          // })
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+            child: const Text(
+                'Al pulsar el botón "iniciar" que aparece abajo, reconozco que he leído y acepto la política de privacidad y los términos de servicio de BauBau SAS.'),
+          ),
+          botonHuella('Iniciar', context, () {
+            print('Botón Iniciar Presionado');
+            Navigator.pushNamed(context, 'dashboard');
+          })
         ],
       ),
     );

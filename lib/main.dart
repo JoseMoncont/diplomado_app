@@ -1,3 +1,4 @@
+import 'package:diplomado_app/pages/dashboard.dart';
 import 'package:diplomado_app/pages/inicio.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: const Inicio(),
+      routes: {
+        'home': (context) => const Inicio(),
+        'dashboard': (context) => const Dashboard()
+      },
     );
   }
 }
