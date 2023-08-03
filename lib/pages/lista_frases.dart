@@ -1,15 +1,20 @@
 import 'package:diplomado_app/models/categorias_response.dart';
+import 'package:diplomado_app/providers/usuarios_provider.dart';
 import 'package:diplomado_app/widgets/appbars.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ListaDeFrases extends StatelessWidget {
   const ListaDeFrases({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Categories categ = Categories();
+    //final providerUsuario = Provider.of<UsuarioProvider>(context);
+
+    //  final usuario = providerUsuario.listaDeUsuarios;
+
     return Scaffold(
-      appBar: appBarPrincipal('Lista de Categorías', () {
+      appBar: appBarPrincipal('Lista de Usuarios', () {
         Navigator.pop(context);
       }),
       body: SingleChildScrollView(
@@ -32,7 +37,7 @@ class ListaDeFrases extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15)),
                     child: Column(
                       children: [
-                        Text(categ.inspire!),
+                        Text('usuario!.firstName!'),
                         Text('Descripción'),
                       ],
                     ),
