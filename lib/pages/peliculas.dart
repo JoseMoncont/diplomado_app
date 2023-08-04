@@ -31,7 +31,10 @@ class PeliculasPage extends StatelessWidget {
                 itemCount: pelicula!.length,
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, 'detalle_pelicula',
+                          arguments: pelicula[index]);
+                    },
                     child: Container(
                       // width: MediaQuery.of(context).size.width,
                       margin: const EdgeInsets.symmetric(
@@ -45,13 +48,27 @@ class PeliculasPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                'https://image.tmdb.org/t/p/original/${pelicula[index].backdropPath}',
+                            borderRadius: BorderRadius.circular(15),
+                            child: FadeInImage(
+                                fadeOutDuration:
+                                    const Duration(milliseconds: 100),
                                 width: 80,
                                 height: 80,
                                 fit: BoxFit.cover,
-                              )),
+                                placeholder: const AssetImage(
+                                    'assets/images/noload.png'),
+                                image: NetworkImage(
+                                  'https://image.tmdb.org/t/p/original/${pelicula[index].backdropPath}',
+                                )),
+                          ),
+                          // ClipRRect(
+                          //     borderRadius: BorderRadius.circular(10),
+                          //     child: Image.network(
+                          //       'https://image.tmdb.org/t/p/original/${pelicula[index].backdropPath}',
+                          //       width: 80,
+                          //       height: 80,
+                          //       fit: BoxFit.cover,
+                          //     )),
                           const SizedBox(
                             width: 10,
                           ),

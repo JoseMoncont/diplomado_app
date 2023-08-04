@@ -1,4 +1,5 @@
 import 'package:diplomado_app/pages/dashboard.dart';
+import 'package:diplomado_app/pages/detalle_pelicula.dart';
 import 'package:diplomado_app/pages/inicio.dart';
 import 'package:diplomado_app/pages/lista_frases.dart';
 import 'package:diplomado_app/providers/categorias_provider.dart';
@@ -47,7 +48,8 @@ class MyApp extends StatelessWidget {
       routes: {
         'home': (context) => const Inicio(),
         'dashboard': (context) => const Dashboard(),
-        'lista_frases': (context) => const ListaDeFrases()
+        'lista_frases': (context) => const ListaDeFrases(),
+        'detalle_pelicula': (context) => const DetallePelicula()
       },
     );
   }
