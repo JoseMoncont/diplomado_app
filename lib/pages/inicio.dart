@@ -1,4 +1,5 @@
 import 'package:diplomado_app/providers/frases_provider.dart';
+import 'package:diplomado_app/providers/peliculas_provider.dart';
 import 'package:diplomado_app/widgets/botones.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -9,6 +10,7 @@ class Inicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final providerFrase = Provider.of<FrasesProvider>(context);
+    final providerPelicula = Provider.of<PeliculasProvider>(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -59,6 +61,7 @@ class Inicio extends StatelessWidget {
             botonHuella('Iniciar', context, () {
               print('Botón Iniciar Presionado');
               providerFrase.consultarFrase();
+              providerPelicula.consultarPeliculas();
               Navigator.pushNamed(context, 'dashboard');
             })
           ],

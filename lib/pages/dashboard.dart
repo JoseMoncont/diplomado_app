@@ -1,7 +1,7 @@
 import 'package:circle_nav_bar/circle_nav_bar.dart';
-import 'package:diplomado_app/providers/categorias_provider.dart';
-import 'package:diplomado_app/providers/usuarios_provider.dart';
+import 'package:diplomado_app/pages/peliculas.dart';
 import 'package:diplomado_app/widgets/appBars.dart';
+import 'package:diplomado_app/widgets/textos.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -46,12 +46,16 @@ class _DashboardState extends State<Dashboard> {
           circleWidth: 50,
           height: 50,
           activeIndex: tabIndex,
-          activeIcons: [
-            Icon(Icons.person),
+          activeIcons: const [
+            Icon(Icons.movie),
             Icon(Icons.home),
             Icon(Icons.settings)
           ],
-          inactiveIcons: [Text('Usuario'), Text('Inicio'), Text('Ajustes')],
+          inactiveIcons: [
+            textoNavBar('Películas'),
+            textoNavBar('Inicio'),
+            textoNavBar('Ajustes'),
+          ],
           onTap: (index) {
             tabIndex = index;
             pageController.jumpToPage(tabIndex);
@@ -64,10 +68,9 @@ class _DashboardState extends State<Dashboard> {
           },
           children: [
             Container(
-              color: Colors.red,
-              width: double.infinity,
-              height: double.infinity,
-            ),
+                width: double.infinity,
+                height: double.infinity,
+                child: PeliculasPage()),
             Container(
                 width: double.infinity,
                 height: double.infinity,

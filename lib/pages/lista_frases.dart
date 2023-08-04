@@ -2,7 +2,6 @@ import 'package:diplomado_app/models/categorias_response.dart';
 import 'package:diplomado_app/providers/usuarios_provider.dart';
 import 'package:diplomado_app/widgets/appbars.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class ListaDeFrases extends StatelessWidget {
   const ListaDeFrases({Key? key}) : super(key: key);

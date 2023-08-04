@@ -3,6 +3,7 @@ import 'package:diplomado_app/pages/inicio.dart';
 import 'package:diplomado_app/pages/lista_frases.dart';
 import 'package:diplomado_app/providers/categorias_provider.dart';
 import 'package:diplomado_app/providers/frases_provider.dart';
+import 'package:diplomado_app/providers/peliculas_provider.dart';
 import 'package:diplomado_app/providers/usuarios_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,6 +21,7 @@ class AppState extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => FrasesProvider()),
         ChangeNotifierProvider(create: (_) => CategoriasProvider()),
+        ChangeNotifierProvider(create: (_) => PeliculasProvider())
         // ChangeNotifierProvider(
         //   create: (_) => UsuarioProvider(),
       ],
