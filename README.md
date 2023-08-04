@@ -1,8 +1,16 @@
 # diplomado_app
 
-A new Flutter project.
+Proyecto Mixto, con fines educativos.
+
+Dudas? 
+IG: @jmoncont
+josemoncont@gmail.com
+
+
 
 ## Getting Started
+
+
 
 This project is a starting point for a Flutter application.
 
